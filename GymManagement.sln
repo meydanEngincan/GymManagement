@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E1DDD4DC-B1C9-4575-B023-07CB87D921D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Domain", "Core\GymManagement.Domain\GymManagement.Domain.csproj", "{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Application", "Core\GymManagement.Application\GymManagement.Application.csproj", "{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{66818D8B-4ADB-4905-8160-29E88CDEA921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Infrastructure", "Infrastructure\GymManagement.Infrastructure\GymManagement.Infrastructure.csproj", "{93C049B3-5250-43E1-9844-9C1BC7CF76DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4F944597-4A10-45FE-9BD5-A46FCB11044A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Presantation", "Presantation\GymManagement.Presantation\GymManagement.Presantation.csproj", "{A211A8FD-DC57-413E-90D5-07958E0203F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C049B3-5250-43E1-9844-9C1BC7CF76DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C049B3-5250-43E1-9844-9C1BC7CF76DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C049B3-5250-43E1-9844-9C1BC7CF76DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C049B3-5250-43E1-9844-9C1BC7CF76DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A211A8FD-DC57-413E-90D5-07958E0203F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A211A8FD-DC57-413E-90D5-07958E0203F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A211A8FD-DC57-413E-90D5-07958E0203F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A211A8FD-DC57-413E-90D5-07958E0203F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FD7A01B-95E7-43A1-AFDB-6E8EFC0B88FD} = {E1DDD4DC-B1C9-4575-B023-07CB87D921D9}
+		{9AEB6C41-8F59-4DED-A6CC-A70512D48C0F} = {E1DDD4DC-B1C9-4575-B023-07CB87D921D9}
+		{93C049B3-5250-43E1-9844-9C1BC7CF76DB} = {66818D8B-4ADB-4905-8160-29E88CDEA921}
+		{A211A8FD-DC57-413E-90D5-07958E0203F4} = {4F944597-4A10-45FE-9BD5-A46FCB11044A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95A928F4-D119-4BB7-9D55-CDA058641264}
+	EndGlobalSection
+EndGlobal
