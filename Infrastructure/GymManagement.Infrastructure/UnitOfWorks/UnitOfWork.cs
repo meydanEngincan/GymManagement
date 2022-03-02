@@ -14,7 +14,7 @@ namespace GymManagement.Infrastructure.UnitOfWorks
         private readonly GymManagementDbContext _context;
 
         public ICampaignRepository Campaigns { get; }
-        public IEmployeDetailRepository EmployeeDetails { get; }
+      //  public IEmployeDetailRepository EmployeeDetails { get; }
         public IEquipmentRepository Equipments { get; }
         public IExerciseProgramRepository ExercisePrograms { get; }
         public IManagerRepository Managers { get; }
@@ -22,16 +22,14 @@ namespace GymManagement.Infrastructure.UnitOfWorks
         public IMissionRepository Missions { get; }
         public ITrainerRepository Trainers { get; }
         public IWorkerContractRepository WorkerContracts { get; }
-        public IWorkerRepository Workers { get; }
-        public IEmployeDetailRepository EmployeDetails => throw new NotImplementedException();
-
+        public IEmployeDetailRepository EmployeDetails { get; }
         public UnitOfWork(ICampaignRepository campaigns, IEmployeDetailRepository employeeDetails,
             IEquipmentRepository equipments, IExerciseProgramRepository exercisePrograms,
             IManagerRepository managers, IMemberRepository members, IMissionRepository missions,
-            ITrainerRepository trainers, IWorkerContractRepository workerContracts, IWorkerRepository workers,GymManagementDbContext context)
+            ITrainerRepository trainers, IWorkerContractRepository workerContracts, GymManagementDbContext context)
         {
             Campaigns = campaigns;
-            EmployeeDetails = employeeDetails;
+            EmployeDetails = employeeDetails;
             Equipments = equipments;
             ExercisePrograms = exercisePrograms;
             Managers = managers;
@@ -39,10 +37,8 @@ namespace GymManagement.Infrastructure.UnitOfWorks
             Missions = missions;
             Trainers = trainers;
             WorkerContracts = workerContracts;
-            Workers = workers;
             _context = context;
         }
-
         public bool SaveChanges()
         {
             if( _context.SaveChanges() > 0)

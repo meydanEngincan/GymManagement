@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace GymManagement.Application.Mapping
 {
-    public class CampaignMappingProfile:Profile
+    public class CampaignMappingProfile : Profile
     {
         public CampaignMappingProfile()
         {
-            CreateMap<Campaign, CampaignQueryViewModel>();
+            CreateMap<CampaignQueryViewModel, Campaign>().ReverseMap();
+            CreateMap<CampaignCommandViewModel, Campaign>().ReverseMap();
         }
     }
 }
