@@ -29,11 +29,12 @@ namespace GymManagement.Presantation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddInfrastructure();
+          //services.AddInfrastructure();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GymManagement.Presantation", Version = "v1" });
             });
+            
 
 
 
