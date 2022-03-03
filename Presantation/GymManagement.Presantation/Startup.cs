@@ -1,3 +1,4 @@
+using GymManagement.Application.DependencyContainers;
 using GymManagement.Application.Interfaces.Repositories;
 using GymManagement.Infrastructure.DependencyContainers;
 using GymManagement.Infrastructure.Repositories;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,6 +31,8 @@ namespace GymManagement.Presantation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
           //services.AddInfrastructure();
             services.AddSwaggerGen(c =>
             {

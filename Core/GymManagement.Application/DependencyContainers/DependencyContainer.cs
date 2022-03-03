@@ -14,5 +14,6 @@ namespace GymManagement.Application.DependencyContainers
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
         }
+      
     }
 }

@@ -34,17 +34,19 @@ namespace GymManagement.Infrastructure.Repositories
 
         public List<T> Get(Expression<Func<T, bool>> filter)
         {
-            return _dbSet.Where(filter).ToList();
+            return _dbSet.Where(filter).Where(t => t.IsDeleted == false).ToList();
+           // return _dbSet.Where(filter).ToList();
         }
 
         public List<T> GetAll()
         {
-            return _dbSet.ToList();
+            return _dbSet.Where(t => t.IsDeleted == false).ToList();
+           // return _dbSet.ToList();
         }
 
         public T GetById(int id)
         {
-            return _dbSet.SingleOrDefault(p => p.Id == id);
+            return _dbSet.Where(t=>t.IsDeleted==false).SingleOrDefault(p => p.Id == id);
         }
 
         public void Update(T entity)

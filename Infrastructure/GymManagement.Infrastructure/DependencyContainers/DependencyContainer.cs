@@ -15,20 +15,19 @@ namespace GymManagement.Infrastructure.DependencyContainers
 {
     public static class DependencyContainer
     {
-        public static void AddInfrastructure(this IServiceCollection services,IConfiguration configuration)
+        public static void AddInfrastructureServices(this IServiceCollection services,IConfiguration configuration)
         {
             services.AddDbContext<GymManagementDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("mssql")));
-
 
             services.AddScoped<ICampaignRepository, CampaignRepository>();
             services.AddScoped<IEmployeDetailRepository, EmployeeDetailRepository>();
             services.AddScoped<IEquipmentRepository, EquipmentRepository>();
             services.AddScoped<IExerciseProgramRepository,ExerciseProgramRepository>();
             services.AddScoped<IManagerRepository,ManagerRepository>();
-            services.AddScoped<IMemberRepository,MemberRepository>();
             services.AddScoped<IMissionRepository,MissionRepository>();
             services.AddScoped<ITrainerRepository,TrainerRepository>();
             services.AddScoped<IWorkerContractRepository,WorkerContractRepository>();
+            
         }
     }
 }

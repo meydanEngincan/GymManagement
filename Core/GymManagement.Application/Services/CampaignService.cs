@@ -31,13 +31,17 @@ namespace GymManagement.Application.Services
                 return true;
             }
             return false;
-            
         }
 
         public bool Delete(int id)
         {
             var campaign=_unitOfWork.Campaigns.GetById(id);
-            _unitOfWork.Campaigns.Delete(campaign);
+            if (campaign == null)
+            {
+                throw new InvalidOperationException("Campaign  not found");
+            }
+            campaign.IsDeleted = true;
+            _unitOfWork.Campaigns.Update(campaign);
             if (_unitOfWork.SaveChanges())
             {
                 return true;
@@ -57,16 +61,16 @@ namespace GymManagement.Application.Services
             var campaigns = _unitOfWork.Campaigns.GetById(id);
             return _mapper.Map<CampaignQueryViewModel>(campaigns);
         }
-
-        public CampaignQueryViewModel GetById()
+        public bool Update(CampaignCommandViewModel model, int id)
         {
-            throw new NotImplementedException();
-        }
+            var campaign=_unitOfWork.Campaigns.GetById(id);
+            if (campaign == null)
+            {
+                throw new InvalidOperationException("Campaign  not found");
+            }
 
-        public bool Update(CampaignCommandViewModel model)
-        {
-            var campaign = _mapper.Map<Campaign>(model);
-            _unitOfWork.Campaigns.Update(campaign);
+            var vmModel = _mapper.Map<Campaign>(model);
+            _unitOfWork.Campaigns.Update(vmModel);
             if (_unitOfWork.SaveChanges())
             {
                 return true;
