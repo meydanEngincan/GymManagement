@@ -38,10 +38,6 @@ namespace GymManagement.Presantation
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GymManagement.Presantation", Version = "v1" });
             });
-            
-
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

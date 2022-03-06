@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace GymManagement.Infrastructure.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
-    {
+    { 
         private readonly GymManagementDbContext _context;
 
         public ICampaignRepository Campaigns { get; }
